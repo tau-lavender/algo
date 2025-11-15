@@ -1,4 +1,4 @@
-def run_factorial_recursive(n: int):
+def run_factorial_recursive(n: int) -> int:
     """
     run factorial_recursive_recursive
     Вычисляет факториал числа n рекурсивно
@@ -18,7 +18,7 @@ def factorial_recursive(n: int) -> None:
     """
     Выводит факториал числа n. Вычисляется рекурсивно
     :n: Число факториал которого надо посчитать
-    :return: Факториал числа n
+    :return: Ничего
     """
     try:
         print(run_factorial_recursive(n))

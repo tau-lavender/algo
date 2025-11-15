@@ -29,7 +29,7 @@ if __name__ == "__main__":
             functions = inspect.getmembers(mod, inspect.isfunction)
             for foo in functions:
                 if foo[0] == func_name[func_name.rfind(".") + 1:]:
-                    app.command()(foo[1])
+                    app.command(context_settings={"ignore_unknown_options": True})(foo[1])
                     break
             else:
                 raise ImportError

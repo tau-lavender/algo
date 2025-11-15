@@ -1,4 +1,4 @@
-def run_factorial(n: int):
+def run_factorial(n: int) -> int:
     """
     run factorial
     Вычисляет факториал числа n
@@ -19,7 +19,7 @@ def factorial(n: int) -> None:
     """
     Выводит факториал числа n
     :n: Число факториал которого надо посчитать
-    :return: Факториал числа n
+    :return: Ничего
     """
     try:
         print(run_factorial(n))

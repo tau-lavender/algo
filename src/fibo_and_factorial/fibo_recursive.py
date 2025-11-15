@@ -1,4 +1,4 @@
-def run_fibo_recursive(n: int):
+def run_fibo_recursive(n: int) -> int:
     """
     run fibo_recursive
     Вычисляет значение числа Фибоначчи рекурсивно
@@ -19,7 +19,7 @@ def fibo_recursive(n: int) -> None:
     """
     Выводит число Фибоначчи под номером n начиная с 1. Знаение считается рекурсивно
     :n: Номер числа Фибоначчи начиная с 1
-    :return: Число Фибоначчи под номером n
+    :return: Ничего
     """
     try:
         print(run_fibo_recursive(n))
