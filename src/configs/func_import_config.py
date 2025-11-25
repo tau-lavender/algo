@@ -1,3 +1,9 @@
+"""
+Импорт модулей. Формат как для import
+Название файла должно совпадать с названием запускаемой typer команды
+и названием функции внутри модуля
+"""
+
 FUNC_IMPORT_CONFIG = ["src.fibo_and_factorial.fibo",
                       "src.fibo_and_factorial.fibo_recursive",
                       "src.fibo_and_factorial.factorial",
