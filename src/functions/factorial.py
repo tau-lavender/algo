@@ -1,9 +1,6 @@
-def run_factorial(n: int) -> int:
+def factorial(n: int) -> int:
     """
-    run factorial
     Вычисляет факториал числа n
-    Для запуска в typer, тестов ии бенчмарок.
-    Не перехватывает ошибки в отличии от factorial()
     :n: Число факториал которого надо посчитать
     :return: Факториал числа n
     """
@@ -15,13 +12,15 @@ def run_factorial(n: int) -> int:
     return ans
 
 
-def factorial(n: int) -> None:
+def factorial_recursive(n: int) -> int:
     """
-    Выводит факториал числа n
+    Вычисляет факториал числа n рекурсивно
     :n: Число факториал которого надо посчитать
-    :return: Ничего
+    :return: Факториал числа n
     """
-    try:
-        print(run_factorial(n))
-    except ValueError as e:
-        print(e)
+    if n <= 0:
+        raise ValueError("Номер числа должен быть больше 0")
+    elif n in (1, 2):
+        return n
+    else:
+        return factorial_recursive(n - 1) * n

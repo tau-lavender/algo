@@ -1,11 +1,16 @@
-from typing import Callable, TypeVar, Any
+from typing import Callable, TypeVar, Any, Protocol
 from functools import cmp_to_key
 T = TypeVar('T')
 KeyFunc = Callable[[T], Any]
 CmpFunc = Callable[[T, T], int] | None
 
 
-def sort_wrapper(func) -> Callable[[list[T], KeyFunc, CmpFunc], list[T]]:
+class SortWrapperCallable(Protocol[T]):
+    def __call__(self, a: list[T], key: KeyFunc = lambda x: x, cmp: CmpFunc = None) -> list[T]:
+        ...
+
+
+def sort_wrapper(func) -> SortWrapperCallable:
     """
     Декоратор для функций сортировки
     :func: - функция сортировки, которая декорируется

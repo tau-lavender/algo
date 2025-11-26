@@ -1,9 +1,6 @@
-def run_fibo(n: int) -> int:
+def fibo(n: int) -> int:
     """
-    run fibo
     Вычисляет число Фибоначчи
-    Для запуска в typer, тестов ии бенчмарок.
-    Не перехватывает ошибки в отличии от fibo()
     :n: Номер числа Фибоначчи начиная с 1
     :return: Число Фибоначчи под номером n
     """
@@ -13,13 +10,15 @@ def run_fibo(n: int) -> int:
     return round(((1 + 5 ** 0.5) ** n - (1 - 5 ** 0.5) ** n) / 2 ** n / 5 ** 0.5)
 
 
-def fibo(n: int) -> None:
+def fibo_recursive(n: int) -> int:
     """
-    Выводит число Фибоначчи под номером n начиная с 1
+    Вычисляет значение числа Фибоначчи рекурсивно
     :n: Номер числа Фибоначчи начиная с 1
-    :return: Ничего
+    :return: Число Фибоначчи под номером n
     """
-    try:
-        print(run_fibo(n))
-    except ValueError as e:
-        print(e)
+    if n <= 0:
+        raise ValueError("Номер числа должен быть больше 0")
+    elif n in (1, 2):
+        return 1
+    else:
+        return fibo_recursive(n - 1) + fibo_recursive(n - 2)
