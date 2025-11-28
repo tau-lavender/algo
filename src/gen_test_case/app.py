@@ -21,3 +21,18 @@ def rand_int_array(n: int, lo: int, hi: int, *, distinct: bool = False, seed: in
         print(*int_arrays.rand_int_array(n, lo, hi, distinct=distinct, seed=seed))
     except ValueError as e:
         print(f"ValueError: {e}")
+
+@app.command()
+def nearly_sorted(n: int, swaps: int, *, seed=None) -> None:
+    """
+    Возвращает массив int от 0 до (n - 1), swaps случайных элементов которого поменяны местами с соседними
+    :n: - кол-во элементов
+    :swaps: - кол-во замен элементов
+    :seed: - сид для рандома
+    :return: - массив
+    """
+
+    try:
+        print(*int_arrays.nearly_sorted(n, swaps, seed=seed))
+    except ValueError as e:
+        print(f"ValueError: {e}")
