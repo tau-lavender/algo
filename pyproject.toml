@@ -7,4 +7,5 @@ dependencies = [
     "pre-commit>=4.4.0",
     "pytest>=8.4.2",
     "typer>=0.20.0",
+    "typer_shell>=1.0.3",
 ]

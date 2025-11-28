@@ -1,11 +1,11 @@
-import typer # type: ignore
+from typer_shell import make_typer_shell # type: ignore
 
 from src.functions.app import app as functions_app
 from src.gen_test_case.app import app as gen_app
 from src.sorts.app import app as sorts_app
 
-
-app = typer.Typer()
+app = make_typer_shell(prompt = "$: ",
+                       intro="Алгоритмический мини-пакет. 'help' для информации о командах")
 
 
 def main() -> None:

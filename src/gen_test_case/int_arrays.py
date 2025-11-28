@@ -21,3 +21,7 @@ def rand_int_array(n: int, lo: int, hi: int, *, distinct: bool = False, seed: in
         return random.sample(range(lo, hi + 1), k=n)
     else:
         return [random.randint(lo, hi) for _ in range(n)]
+
+
+def nearly_sorted(n: int, swaps: int, *, seed=None) -> list[int]:
+    return []
