@@ -62,3 +62,15 @@ def many_duplicates(n: int, k_unique: int = 5, *, seed=None) -> list[int]:
 
     random.seed(seed)
     return random.choices(range(k_unique), k = n)
+
+
+def reverse_sorted(n: int) -> list[int]:
+    """
+    Возвращает массив int от (n - 1) до 0
+    :n: - кол-во элементов
+    :return: - массив
+    """
+
+    if n <= 0:
+        raise ValueError("Кол-во элементов должно быть > 0")
+    return list(reversed(range(n)))
