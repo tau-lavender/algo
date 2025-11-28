@@ -7,7 +7,7 @@ import src.sorts.quick_sort
 app = typer.Typer()
 
 
-@app.command()
+@app.command(context_settings={"ignore_unknown_options": True}) # поддержка отрицательных чисел
 def bubble_sort(a: list[int]) -> None:
     # Функция для typer
     """
@@ -21,7 +21,7 @@ def bubble_sort(a: list[int]) -> None:
         print(e)
 
 
-@app.command()
+@app.command(context_settings={"ignore_unknown_options": True}) # поддержка отрицательных чисел
 def quick_sort(a: list[int]) -> None:
     # Функция для typer
     """

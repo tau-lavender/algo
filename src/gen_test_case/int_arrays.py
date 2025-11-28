@@ -44,3 +44,21 @@ def nearly_sorted(n: int, swaps: int, *, seed: int | None = None) -> list[int]:
         print(index)
         array[index], array[index + 1] = array[index + 1], array[index]
     return array
+
+
+def many_duplicates(n: int, k_unique: int = 5, *, seed=None) -> list[int]:
+    """
+    Возвращает массив из n int от 0 до (k_unique - 1)
+    :n: - кол-во элементов
+    :k_unique: - кол-во уникальных элементов
+    :seed: - сид для рандома
+    :return: - массив
+    """
+
+    if k_unique <= 2:
+        raise ValueError("Кол-во уникальных элементов должно быть >= 2")
+    if n <= 0:
+        raise ValueError("Кол-во элементов должно быть > 0")
+
+    random.seed(seed)
+    return random.choices(range(k_unique), k = n)
