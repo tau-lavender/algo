@@ -5,6 +5,8 @@ def counting_sort(a: list[int])  -> list[int]:
     :a: Список для сортировки
     :return: Отсортированный список a
     """
+    if not a:
+        return a
     array = []
     min_el = min(a)
     counter = [0] * (max(a) - min_el + 1)
