@@ -10,6 +10,8 @@ def radix_sort(a: list[int], base: int = 10) -> list[int]:
 
     if not a:
         return a
+    if any([x < 0 for x in a]):
+        raise ValueError("Функция принимает только неотрицательные числа")
     array = a.copy()
     max_elem = max(array)
     cou = 1
