@@ -49,8 +49,8 @@ def benchmark_sorts() -> None:
     for name in names:
         print(f"{c}: {name}")
         c += 1
-    print("Sort: \t\t", end = "")
-    for i in range(1, c + 1):
+    print("Sort: \t\t\t", end = "")
+    for i in range(1, c):
         print(f"\t {i}", end = "")
     print()
     for curent_sort in sorts:
