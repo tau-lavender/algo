@@ -30,4 +30,4 @@ def test_bubble_sort_key():
 
 def test_bubble_sort_empty():
     ans = bubble_sort([])
-    assert ans is list and not ans
+    assert ans == []

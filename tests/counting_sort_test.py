@@ -23,4 +23,4 @@ def test_counting_sort_float():
 
 def test_counting_sort_empty():
     ans = counting_sort([])
-    assert ans is list and not ans
+    assert ans == []

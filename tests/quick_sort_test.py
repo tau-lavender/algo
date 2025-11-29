@@ -30,4 +30,4 @@ def test_quick_sort_key():
 
 def test_quick_sort_empty():
     ans = quick_sort([])
-    assert ans is list and not ans
+    assert ans == []
