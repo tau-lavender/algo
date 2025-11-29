@@ -5,6 +5,7 @@ import src.sorts.quick_sort
 import src.sorts.counting_sort
 import src.sorts.radix_sort
 import src.sorts.bucket_sort
+import src.sorts.heap_sort
 
 
 app = typer.Typer()
@@ -68,3 +69,14 @@ def bucket_sort(a: list[float], buckets: int | None = None) -> None:
     :return: Отсортированный список a
     """
     print(*src.sorts.bucket_sort.bucket_sort(a, buckets=buckets))
+
+
+@app.command(context_settings={"ignore_unknown_options": True}) # поддержка отрицательных чисел
+def heap_sort(a: list[int]) -> None:
+    # Функция для typer
+    """
+    Выводит список отсортированный пирамидой
+    :a: Список для сортировки
+    :return: Ничего
+    """
+    print(*src.sorts.heap_sort.heap_sort(a))
