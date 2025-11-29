@@ -4,6 +4,7 @@ from src.functions.app import app as functions_app
 from src.gen_test_case.app import app as gen_app
 from src.sorts.app import app as sorts_app
 from src.stack.app import app as stack_app
+from src.benchmark.app import app as benchmark_app
 
 
 def main() -> None:
@@ -19,6 +20,7 @@ def main() -> None:
     app.add_typer(sorts_app)
     app.add_typer(stack_app)
     app.add_typer(gen_app)
+    app.add_typer(benchmark_app)
 
     app()
 

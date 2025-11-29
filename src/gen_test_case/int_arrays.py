@@ -41,7 +41,6 @@ def nearly_sorted(n: int, swaps: int, *, seed: int | None = None) -> list[int]:
     array = list(range(n))
     for _ in range(swaps):
         index = random.randint(0, n - 2)
-        print(index)
         array[index], array[index + 1] = array[index + 1], array[index]
     return array
 

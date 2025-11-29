@@ -40,3 +40,26 @@ stack <команда для стака> <аргументы>
 ---
 ## Допущения
 -
+
+
+# Benchmark
+- Получено командой "benchmark-sorts" в CLI
+```
+Sees: 3498925
+Arrays:
+1: rand_int_array(2000, 0, 100)
+2: rand_int_array(2000, 0, 10000)
+3: rand_int_array(2000, -100, 100)
+4: nearly_sorted(2000, 5)
+5: many_duplicates(2000, 5)
+6: reverse_sorted(2000)
+7: rand_float_array(2000, 0, 10)
+8: rand_float_array(2000, -10, 10)
+Sort:                    1       2       3       4       5       6       7       8       9
+bubble_sort                      2.9162  2.4658  2.4887  1.8470  2.3480  2.9887  2.3959  2.3315
+quick_sort                       0.0250  0.0522  0.0174  0.0161  0.0156  0.0156  0.0312  0.0313
+counting_sort                    0.0000  0.0156  0.0028  0.0000  0.0007  0.0016  None    None
+radix_sort                       0.0080  0.0126  None    0.0000  0.0082  0.0045  None    None
+bucket_sort                      0.0230  1.2183  0.0000  0.0469  0.0156  0.0469  1.4240  1.4250
+heap_sort                        0.0742  0.0494  0.0469  0.0469  0.0313  0.0469  0.0469  0.0494
+```
