@@ -4,6 +4,7 @@ import src.sorts.bubble_sort
 import src.sorts.quick_sort
 import src.sorts.counting_sort
 import src.sorts.radix_sort
+import src.sorts.bucket_sort
 
 
 app = typer.Typer()
@@ -55,3 +56,15 @@ def radix_sort(a: list[int], base: int = 10) -> None:
     :return: Отсортированный список a
     """
     print(*src.sorts.radix_sort.radix_sort(a, base))
+
+
+@app.command()
+def bucket_sort(a: list[float], buckets: int | None = None) -> None:
+    # Функция для typer
+    """
+    Сортирует список
+    :a: Список для сортировки
+    :buckets: Кол-во блоков
+    :return: Отсортированный список a
+    """
+    print(*src.sorts.bucket_sort.bucket_sort(a, buckets=buckets))
